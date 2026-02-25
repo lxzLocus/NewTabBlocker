@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>New Tab Blocker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>🚫 New Tab Blocker</h1>
+
+  <!-- ドメイン追加 -->
+  <div class="input-row">
+    <input type="text" id="domainInput" placeholder="例: tatrck.com" />
+    <button id="addBtn">追加</button>
+  </div>
+
+  <!-- JSON / TXT ファイルからインポート -->
+  <div class="import-row">
+    <label for="fileInput" class="import-label">📂 ファイルからインポート (.json / .txt)</label>
+    <input type="file" id="fileInput" accept=".json,.txt" />
+  </div>
+
+  <!-- ドメイン一覧 -->
+  <div id="status" class="status" hidden></div>
+  <ul id="domainList"></ul>
+
+  <div class="footer">
+    <button id="exportBtn" class="secondary">📤 エクスポート</button>
+    <button id="clearBtn" class="danger">全削除</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
